@@ -1,0 +1,131 @@
+﻿- type: entity
+  abstract: true
+  id: BluspacePowerTransmitterBase
+  parent: [ BaseMachine, ConstructibleMachine ]
+  name: Bluspace Power Transmitter
+  description: BluspacePowerTransmitterToDoDesc.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite # TODO: add sprite for maintenance panel open
+    sprite: Structures/Power/substation.rsi
+    snapCardinals: true
+    layers:
+    - state: substation
+    - state: screen
+      shader: unshaded
+    - state: full
+      shader: unshaded
+  - type: Battery
+    maxCharge: 2500000
+    startingCharge: 0
+  - type: ExaminableBattery
+  - type: PointLight
+    radius: 1.5
+    energy: 1
+    color: "#ff6900"
+    castShadows: false
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+      output:
+        !type:CableDeviceNode
+        nodeGroupID: MVPower
+  - type: PowerMonitoringDevice
+    group: Substation
+    sourceNode: input
+    loadNode: output
+    collectionName: substation
+    sprite: Structures/Power/substation.rsi
+    state: substation_static
+  - type: BatteryCharger
+    voltage: High
+  - type: BatteryDischarger
+    voltage: Medium
+  - type: PowerNetworkBattery
+    maxSupply: 150000
+    maxChargeRate: 5000
+    supplyRampTolerance: 5000
+    supplyRampRate: 1000
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: PacifismDangerousAttack
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+      - !type:ExplodeBehavior
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MachineFrameDestroyed:
+            min: 1
+            max: 1
+      - !type:SpawnGasBehavior
+        gasMixture:
+          volume: 1000
+          moles:
+            - 0 # oxygen
+            - 0 # nitrogen
+            - 340.5701689 # carbon dioxide
+          temperature: 373.15
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 100
+    intensitySlope: 2
+    totalIntensity: 200
+  - type: WiresPanel
+  - type: Machine
+    board: SubstationMachineCircuitboard
+  - type: StationInfiniteBatteryTarget
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -5
+    range: 3
+    sound:
+      path: /Audio/Ambience/Objects/buzzing.ogg
+  - type: Electrified
+    onHandInteract: false
+    onInteractUsing: false
+    onBump: false
+    requirePower: true
+    highVoltageNode: input
+    mediumVoltageNode: output
+  - type: GuideHelp
+    guides:
+    - VoltageNetworks
+    - Power
+
+
+- type: entity
+  parent: BluspacePowerTransmitterBase
+  id: BluspacePowerTransmitterBasic
+  suffix: Basic, 2.5MJ
+  components:
+  - type: Battery
+    maxCharge: 2500000
+    startingCharge: 2500000
+
+- type: entity
+  parent: BluspacePowerTransmitterBasic
+  id: BluspacePowerTransmitterEmpty
+  suffix: Empty
+  components:
+  - type: Battery
+    startingCharge: 0
