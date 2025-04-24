@@ -303,6 +303,124 @@
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: tool-module }
 
+- type: entity
+  id: BorgModulePaperwork
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
+  name: paperwork cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: generic
+    - state: icon-cables
+  - type: ItemBorgModule
+    moduleId: Papwerwork
+    items:
+    - Pen
+    - RubberStampApproved
+    - RubberStampDenied
+  - type: DroppableBorgModule
+    moduleId: Papwerwork
+    items:
+    - id: Paper
+      whitelist:
+        components:
+          - FaxableObject
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: wire-module }
+
+- type: entity
+  id: BorgModuleShielding
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
+  name: Shielding cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: generic
+    - state: icon-cables
+  - type: ItemBorgModule
+    moduleId: BorgModuleShielding
+    items:
+    - RiotBulletShield
+    - RiotLaserShield
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: wire-module }
+
+- type: entity
+  id: BorgModuleConfigurator
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
+  name: configuration cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: generic
+    - state: icon-cables
+  - type: ItemBorgModule
+    moduleId: BorgModuleConfigurator
+    items:
+    - AccessConfigurator
+    - NetworkConfigurator
+  - type: DroppableBorgModule
+    moduleId: BorgModuleConfigurator
+    items:
+    - id: VisitorIDCard
+      whitelist:
+        components:
+          - IdCard
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: wire-module }
+
+- type: entity
+  id: BorgModuleLabeling
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
+  name: labeling cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: generic
+    - state: icon-cables
+  - type: ItemBorgModule
+    moduleId: BorgModuleLabeling
+    items:
+    - HandLabeler
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: wire-module }
+
+- type: entity
+  id: BorgModuleVoidMobility
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
+  name: void mobility cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: generic
+    - state: icon-cables
+  - type: DroppableBorgModule
+    moduleId: BorgModuleVoidMobility
+    items:
+    - id: JetpackMini
+      whitelist:
+        components:
+          - Jetpack
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: wire-module }
+
+- type: entity
+  id: BorgModuleCamrraAccess
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
+  name: camera access cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: generic
+    - state: icon-cables
+  - type: ItemBorgModule
+    moduleId: BorgModuleCamrraAccess
+    items:
+    - CameraBug #needs a retectured version for borgs
+    - BaseHandheldTelevision
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: wire-module }
+
 # cargo modules
 - type: entity
   id: BorgModuleAppraisal
@@ -429,6 +547,91 @@
     - RCDRecharging
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: rcd-module }
+
+- type: entity
+  id: BorgModuleAdvancedConstruction
+  parent: [ BaseBorgModuleEngineering, BaseProviderBorgModule ]
+  name: advanced construction cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: engineering
+    - state: icon-construction
+  - type: ItemBorgModule
+    moduleId: BorgModuleAdvancedConstruction
+    items:
+    - SheetRGlassLingering0
+    - SheetPGlassLingering0
+    - SheetRPGlassLingering0
+    - SheetUGlassLingering0
+    - SheetRUGlassLingering0
+    - SheetPlasteelLingering0
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: construction-module }
+
+- type: entity
+  id: BorgModuleFlatpack
+  parent: [ BaseBorgModuleEngineering, BaseProviderBorgModule ]
+  name: Flatpack cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: engineering
+    - state: icon-construction
+  - type: DroppableBorgModule
+    moduleId: BorgModuleFlatpack
+    items:
+    - id: FaxMachineFlatpack
+      whitelist:
+        components:
+        - Flatpack
+    - id: SolarAssemblyFlatpack
+      whitelist:
+        components:
+        - Flatpack
+    # End Frontier: droppable borg items
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: construction-module }
+
+- type: entity
+  id: BorgModulePowerMonitor
+  parent: [ BaseBorgModuleEngineering, BaseProviderBorgModule ]
+  name: advanced construction cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: engineering
+    - state: icon-construction
+  - type: ItemBorgModule
+    moduleId: BorgModulePowerMonitor
+    items:
+    - BaseHandheldStationMapPowerCe
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: construction-module }
+
+- type: entity
+  id: BorgModuleRefueling
+  parent: [ BaseBorgModuleEngineering, BaseProviderBorgModule ]
+  name: refueling cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: engineering
+    - state: icon-construction
+  - type: DroppableBorgModule
+    moduleId: BorgModuleRefueling
+    items:
+    - id: AmeJar
+      whitelist:
+        components:
+        - AmeFuelContainer
+    - id: PlasmaTank
+      whitelist:
+        components:
+        - GasTank
+    # End Frontier: droppable borg items
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: construction-module }
 
 # janitorial modules (this gets its own unique things because janis are epic)
 - type: entity
@@ -608,6 +811,39 @@
     - Multitool
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: anomaly-module }
+
+- type: entity
+  id: BorgModuleRobotics
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
+  name: robotics cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: science
+    - state: icon-artifacts
+  - type: ItemBorgModule
+    moduleId: BorgModuleRobotics
+    items:
+    - Screwdriver
+    - CableApcStackLingering10
+  - type: DroppableBorgModule
+    moduleId: BorgModuleRefueling
+    items:
+    - id: LightHeadBorg
+      whitelist:
+        components:
+          - type: BodyPart
+            species: Cyborg
+    - id: SciFlash
+      whitelist:
+        components:
+        - Flash
+    - id: 
+      whitelist:
+        components:
+        - BorgBrain
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: node-scanner-module }
 
 # service modules
 - type: entity
