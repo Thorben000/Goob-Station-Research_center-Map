@@ -41,3 +41,11 @@
       Glass: 75
   - type: StaticPrice
     price: 85
+
+- type: entity
+  name: borg t-ray scanner
+  parent: trayScanner
+  id: borgTrayScanner
+  components:
+  - type: TrayScanner
+    Range: 12

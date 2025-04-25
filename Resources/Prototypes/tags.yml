@@ -328,6 +328,9 @@
   id: BorgTorso
 
 - type: Tag
+  id: BorgComponent
+
+- type: Tag
   id: BorgLeg
 
 - type: Tag
