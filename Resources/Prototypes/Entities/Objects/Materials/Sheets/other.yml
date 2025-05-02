@@ -362,21 +362,3 @@
       state: meat
     - type: Stack
       count: 1
-
-- type: entity
-  parent: SheetUranium
-  id: SheetUraniumLingering0
-  suffix: Lingering, 0
-  components:
-  - type: Stack
-    lingering: true
-    count: 0
-
-- type: entity
-  parent: SheetPlasma
-  id: SheetPlasmaLingering0
-  suffix: Lingering, 0
-  components:
-  - type: Stack
-    lingering: true
-    count: 0
