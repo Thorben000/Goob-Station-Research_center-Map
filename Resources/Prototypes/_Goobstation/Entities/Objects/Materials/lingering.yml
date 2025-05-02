@@ -51,3 +51,21 @@
   - type: Stack
     lingering: true
     count: 0
+
+- type: entity
+  parent: RegenerativeMesh
+  id: RegenerativeMeshLingering0
+  suffix: Lingering, 0
+  components:
+  - type: Stack
+    lingering: true
+    count: 0
+
+- type: entity
+  parent: MedicatedSuture
+  id: MedicatedSutureLingering0
+  suffix: Lingering, 0
+  components:
+  - type: Stack
+    lingering: true
+    count: 0

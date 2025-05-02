@@ -590,15 +590,6 @@
       - Rifle
 
 - type: entity
-  name: portable particle decelerator
-  parent: WeaponParticleDecelerator
-  id: BorgWeaponParticleDecelerator
-  description: A portable particle decelerator capable of decomposing a tesla or singularity. This one slowly recharges using the borgs internal battery,
-  components:
-  - type: AutoRecharge
-    rechargeDuration: 10
-
-- type: entity
   name: x-ray cannon
   parent: [BaseWeaponBattery, BaseGunWieldable, BaseSecurityContraband]
   id: WeaponXrayCannon

@@ -217,8 +217,8 @@
   - type: ItemBorgModule
     moduleId: BorgModuleParamed
     items:
-    - MedicatedSuture
-    - RegenerativeMesh
+    - MedicatedSutureLingering0
+    - RegenerativeMeshLingering0
   - type: DroppableBorgModule
     moduleId: BorgModuleParamed
     items:
@@ -305,7 +305,7 @@
     - CableMVStackLingering10
     - CableHVStackLingering10
     - JawsOfLife
-    - borgTrayScanner
+    - TrayScanner
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: construction-module }
 
