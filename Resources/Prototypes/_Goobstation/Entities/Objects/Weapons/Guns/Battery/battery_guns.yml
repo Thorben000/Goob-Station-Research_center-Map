@@ -246,6 +246,22 @@
     autoRechargeRate: 80
 
 - type: entity
+  name: advanced pulse carbine
+  parent: WeaponPulseCarbine
+  id: WeaponPulseCarbineAdvancedBorg
+  description: A state-of-the-art pulse carbine. This particular one has an experimental recharging cell.
+  components:
+  - type: Tag
+    tags:
+    - Rifle
+  - type: Gun
+    minAngle: 1
+    maxAngle: 2
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 80
+
+- type: entity
   name: CR-2 energy assault rifle
   parent: [ BaseWeaponPowerCell, BaseGunWieldable, BaseSecurityContraband ]
   id: WeaponEnergyRifle
