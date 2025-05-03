@@ -312,4 +312,4 @@
   components:
   - type: BatterySelfRecharger
     autoRecharge: true
-    rechargeDuration: 10
+    rechargeDuration: 100

@@ -113,9 +113,8 @@
     - type: ItemBorgModule
       moduleId: BorgModuleERTEngi
       items:
-        - RCDRecharging
+        - RCDExperimental
         - WeaponPulsePistol
-        - RPDRecharging
     - type: BorgModuleIcon
       icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-l6c-module }
 
