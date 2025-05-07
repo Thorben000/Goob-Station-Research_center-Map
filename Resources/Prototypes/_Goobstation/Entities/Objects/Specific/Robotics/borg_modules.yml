@@ -97,7 +97,7 @@
           components:
           - FitsInDispenser
     - type: BorgModuleIcon
-      icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-l6c-module }
+      icon: { sprite: Interface/Actions/actions_borg.rsi, state: ERT-med-module }
 
 - type: entity
   id: BorgModuleERTEngi
@@ -116,7 +116,7 @@
         - RCDExperimental
         - WeaponPulsePistol
     - type: BorgModuleIcon
-      icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-l6c-module }
+      icon: { sprite: Interface/Actions/actions_borg.rsi, state: ERT-engi-module }
 
 - type: entity
   id: BorgModuleERTSec
@@ -137,7 +137,7 @@
         - WeaponPulsePistol 
         - WeaponDisablerAdvanced 
     - type: BorgModuleIcon
-      icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-l6c-module }
+      icon: { sprite: Interface/Actions/actions_borg.rsi, state: ERT-sec-module }
 
 #science
 
@@ -180,7 +180,7 @@
         - DroppableBorgModule
         - ItemBorgModule
   - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: node-scanner-module }
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: self-replication-module }
 
 - type: entity
   id: BorgInverter
@@ -200,7 +200,7 @@
         - QuantumSpinInverter
 
   - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: node-scanner-module }
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: spin-inverter-module }
 
 #medical
 
@@ -230,7 +230,7 @@
         tags:
         - EmergencyMedipen
   - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: adv-diagnosis-module }
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: paramed-module }
 
 - type: entity
   id: BorgModuleChemisty
@@ -262,7 +262,7 @@
         tags:
         - ChemDispensable
   - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: adv-diagnosis-module }
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: chemistry-module }
 
 #engi
 
@@ -285,7 +285,7 @@
     - SheetRUGlassLingering0
     - SheetPlasteelLingering0
   - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: construction-module }
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: advanced-construction-module }
 
 - type: entity
   id: BorgModuleAdvancedCabeling
@@ -304,9 +304,9 @@
     - CableMVStackLingering10
     - CableHVStackLingering10
     - JawsOfLife
-    - TrayScanner
+    - trayScanner
   - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: construction-module }
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: advanced-cabele-module }
 
 - type: entity
   id: BorgModuleRefueling
@@ -318,7 +318,7 @@
     - state: engineering
     - state: icon-refueling
   - type: ItemBorgModule
-    moduleId: BorgModuleAdvancedConstruction
+    moduleId: BorgModuleRefueling
     items:
     - SheetPlasmaLingering0
     - SheetUraniumLingering0
@@ -335,7 +335,7 @@
         - GasTank
     # End Frontier: droppable borg items
   - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: construction-module }
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: refueling-module }
 
 #general
 
@@ -353,7 +353,7 @@
     items:
     - BorgWeaponParticleDecelerator
   - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: tool-module }
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: particle-decelerator-module }
 
 - type: entity
   id: BorgModulePaperwork
@@ -379,7 +379,7 @@
         components:
           - FaxableObject
   - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: wire-module }
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: paperwork-module }
 
 - type: entity
   id: BorgModuleShielding
@@ -396,7 +396,7 @@
     - RiotBulletShield
     - RiotLaserShield
   - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: wire-module }
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: shielding-module }
 
 - type: entity
   id: BorgModuleConfigurator
@@ -420,7 +420,7 @@
         components:
           - IdCard
   - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: wire-module }
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: configurator-module }
 
 - type: entity
   id: BorgModuleVoidMobility
@@ -439,7 +439,7 @@
         components:
           - Jetpack
   - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: wire-module }
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: void-mobility-module }
 
 - type: entity
   id: BorgModuleCamrraAccess
@@ -456,4 +456,4 @@
     - CameraBug #needs a retectured version for borgs
     - BaseHandheldTelevision
   - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: wire-module }
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: camera-access-module }
